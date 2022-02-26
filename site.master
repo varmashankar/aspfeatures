@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>apsFeatures - Home</title>
+
+ <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!---Vendor Css Files--->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<!-- Fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" type="text/css" href="http://codeseven.github.com/toastr/toastr.css">    
+<link rel="stylesheet" type="text/css" href="http://codeseven.github.com/toastr/toastr-responsive.css">
+
+<!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+
+      <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top pb-2 d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo d-flex">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="home.aspx"><img src="assets/img/g9VcTd01.svg" alt="" class="img-fluid"></a>
+                  <h1 class="mt-4 mx-1"><a href="home.aspx"><span>aps-FEATURES</span></a></h1>
+
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li id="pg1" runat="server"><a class="nav-link" href="home.aspx" aria-current="page">Home</a></li>
+          <li id="pg2" runat="server"><a class="nav-link" href="about.aspx" aria-current="page">About Us</a></li>
+          <li id="pg3" class="dropdown" runat="server"><a href="#" aria-current="page"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="ourteam.aspx">Our Team</a></li>
+              <li><a href="clients.aspx">Clients</a></li>
+              <li><a href="investors.aspx">Investors</a></li>
+            </ul>
+          </li>
+          <li id="pg4" class="dropdown" runat="server"><a class="nav-link" href="#" aria-current="page">Services <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                  <li><a href="websites.aspx">Build Website</a></li>
+                  <li><a href="mobileapplications.aspx">Mobile Application</a></li>
+                  <li><a href="digitizations.aspx">Digitization</a></li>
+                  <li><a href="troubleshoot.aspx">Troubleshoot</a></li>
+                  <li><a href="softwarecustomization.aspx">Software Customization</a></li>
+                  <li><a href="annualmaintenance.aspx">Annual Maintenance</a></li>
+                  <li><a href="hardware.aspx">Hardware</a></li>
+                  <li><a href="remote.aspx">Remote Support</a></li>
+              </ul>
+          </li>
+          <li id="pg5" runat="server"><a class="nav-link" href="careers.aspx" aria-current="page">Careers</a>
+          </li>
+          <li id="pg6" runat="server"><a class="nav-link" href="contact.aspx" aria-current="page">Contact</a></li>
+          <li><a class="getstarted" href="#about" aria-current="page">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+    <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+ 
+ 
+     <!-- ======= Footer ======= -->
+    
+        
+ <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Get Latest News Related to apsfeatures right into your inbox.</p>
+            <div class="news-letter">
+                <asp:TextBox CssClass="email-box" TextMode="Email" ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:Button ID="Button1" runat="server" CssClass="subscribe-button" Text="Subscribe" OnClick="Button1_Click" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <img src="assets/img/logo.png" width="120" />
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Careers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="websites.aspx">Website Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="mobileapplications.aspx">Mobile Applications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="digitizations.aspx">Digitization</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="troubleshoot.aspx">Troubleshoot</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="softwarecustomization.aspx">Software Customization</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="annualmaintenance.aspx">Annual Maintenance</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="hardware.aspx">Harware</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="remote.aspx">Remote Support</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Follow us on our Social handles, we are always there for you.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>ASPFEATURES</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">aspfeatures.</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </form>
+
+<!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://codeseven.github.com/toastr/toastr.js"></script>
+
+<!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+
+</body>
+</html>
